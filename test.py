@@ -1,7 +1,0 @@
-f = open("t.bin", 'wb')
-f.write("ЛокиБордер1".encode('utf-8'))
-f.close()
-f = open("t.bin", "rb")
-s1 = f.read()
-f.seek(0)
-s = f.read(8)
