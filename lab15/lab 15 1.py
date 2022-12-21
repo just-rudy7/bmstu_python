@@ -15,7 +15,7 @@ def delete_negative(file, form, form_len):
     shift = 0  # сдвиг влево всех записей (для удаления перезаписью)
     while i+shift < size:
         f.seek(i * form_len)
-        num = int(unpack(form, f.read(4))[0])
+        num = int(unpack(form, f.read(form_len))[0])
         if num < 0: #TODO проверяй, есть ли числа после
             shift += 1
             if i+shift < size:
@@ -34,6 +34,7 @@ def delete_negative(file, form, form_len):
         #print(shift)
     
     f.truncate((size-shift) * form_len)
+    f.close()
 
 
 file = choose_file()
