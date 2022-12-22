@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958f767a-9b38-44d7-b92f-ae0e5d3e5c74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab15/lab 15 3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab15/3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab15/lab 15 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab15/lab 15 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab15/2.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/2.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
       <recent name="C:\Users\Dasha\OneDrive\Документы\GitHub\bmstu_python\lab13" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lab 15 2">
+  <component name="RunManager" selected="Python.lab 15 3">
     <configuration name="addiction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bmstu_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lab 15 3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bmstu_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,11 +116,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab14" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab15" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab14/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab15/lab 15 3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lab 15 3" />
         <item itemvalue="Python.lab 15 2" />
         <item itemvalue="Shell Script.test.sh" />
         <item itemvalue="Python.lab 15 1" />
         <item itemvalue="Python.addiction" />
-        <item itemvalue="Python.test (1)" />
       </list>
     </recent_temporary>
   </component>
