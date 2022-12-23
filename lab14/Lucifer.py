@@ -1,10 +1,7 @@
-def replace_b4_start(text):
-    pass
-
-
-def replase_end(text):
-    pass
-
+# пока без начальных и конечных перестановок, но модет как-нибудь
+from struct import pack as pack
+from struct import unpack as unpack
+from make_a_key import key_changing as shift_key
 
 def f_for_des(r, k):
     r_new = 0
@@ -13,11 +10,12 @@ def f_for_des(r, k):
 
 def code(file_name):
     f = open(file_name, 'rb')
-    while f.tell() > 0:
-        f.read(8)
+    for i in range(1, 17):
+        bin_key = shift_key(i)
+    
     
     ciphertext = ""
-    return ciphertext
+    f.close()
 
 
 def decode(ciphertext):
