@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958f767a-9b38-44d7-b92f-ae0e5d3e5c74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/4я.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab14/5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab14/make_a_key.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4я.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab14/5.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/Lucifer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/Lucifer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab14/lab 14.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/lab 14.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab14/key.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/key.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab14/make_a_key.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/make_a_key.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +49,7 @@
       <recent name="C:\Users\Dasha\OneDrive\Документы\GitHub\bmstu_python\lab13" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.Lucifer">
     <configuration name="4я" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bmstu_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,10 +157,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.lab 14" />
-        <item itemvalue="Python.make_a_key" />
         <item itemvalue="Python.Lucifer" />
+        <item itemvalue="Python.make_a_key" />
+        <item itemvalue="Python.lab 14" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.4я" />
       </list>
     </recent_temporary>
