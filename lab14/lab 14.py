@@ -15,6 +15,7 @@
 
 from struct import *
 from make_a_key import *
+#from Lucifer import code as code
 
 
 # удаление записи по номеру
@@ -40,8 +41,7 @@ def deleting(file, form_len):  # удаление записи по номеру
         f.seek(curr_num)
         f.write(tmp)
         curr_num += form_len
-        output_bd(file, "25s25s2s", form_len)
-    
+        
     f.truncate(size - form_len)
     f.close()
 
@@ -158,8 +158,8 @@ def add_info_anywhere(file, form, form_len):
         f.seek(curr + form_len)
         f.write(tmp)
         curr -= form_len
-    
-    f.seek(num * form_len)
+    # s = code(s)
+    f.seek(num * form_len) # TODO шифровка вот этой вот штуки
     f.write(s)
     f.close()
 
@@ -296,6 +296,7 @@ while curr_command != 0:
                 print("Файл не был выбран")
             elif chek_bd(file):
                 deleting(file, len_s_format)
+                output_bd(file, "25s25s2s", len_s_format)
             else:
                 print("Ваш файл не существует")
         case "8":

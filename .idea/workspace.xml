@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="958f767a-9b38-44d7-b92f-ae0e5d3e5c74" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4я.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab14/5.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/Lucifer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/Lucifer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab14/key.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/key.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab14/make_a_key.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/make_a_key.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab14/lab 14.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/lab 14.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab15/lab 15 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab15/lab 15 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab15/lab 15 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,28 +49,7 @@
       <recent name="C:\Users\Dasha\OneDrive\Документы\GitHub\bmstu_python\lab13" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Lucifer">
-    <configuration name="4я" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bmstu_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4я.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.test">
     <configuration name="Lucifer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bmstu_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="make_a_key" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lab 15 1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bmstu_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,11 +100,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab14" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab15" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab14/make_a_key.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab15/lab 15 1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lab 15 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bmstu_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab15/lab 15 2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Lucifer" />
-        <item itemvalue="Python.make_a_key" />
-        <item itemvalue="Python.lab 14" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.4я" />
+        <item itemvalue="Python.lab 15 2" />
+        <item itemvalue="Python.lab 15 1" />
+        <item itemvalue="Python.Lucifer" />
+        <item itemvalue="Python.lab 14" />
       </list>
     </recent_temporary>
   </component>

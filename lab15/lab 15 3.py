@@ -16,14 +16,14 @@ def bubble_sort(file, form, form_len, dir):
         for i in range(1, size):
             f.seek((i-1)*form_len)
             el1 = int(unpack(form, f.read(form_len))[0])
-            f.seek(i*form_len)
+            #f.seek(i*form_len)
             el2 = int(unpack(form, f.read(form_len))[0])
  
             if el1 * dir < el2 * dir:
                 if_sorted = False
                 f.seek((i - 1) * form_len)
                 f.write(pack(form, el2))
-                f.seek(i * form_len)
+                #f.seek(i * form_len)
                 f.write(pack(form, el1))
     f.close()
 
