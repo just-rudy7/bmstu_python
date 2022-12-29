@@ -5,23 +5,76 @@ from make_a_key import key_changing as shift_key
 
 def change_positions_for_a_start(text):
     new_text = ""
-    for i in range(58 - 1, 0, -8):
-        new_text += text[i]
-    for i in range(60 - 1, 0, -8):
-        new_text += text[i]
-    for i in range(62 - 1, 0, -8):
-        new_text += text[i]
-    for i in range(64 - 1, 0, -8):
-        new_text += text[i]
-    for i in range(57 - 1, 0, -8):
-        new_text += text[i]
-    for i in range(59 - 1, 0, -8):
-        new_text += text[i]
-    for i in range(61 - 1, 0, -8):
-        new_text += text[i]
-    for i in range(63 - 1, 0, -8):
-        new_text += text[i]
+    cnt = 0
+    for i in range(58, 0, -8):
+        new_text += text[i-1]
+    for i in range(60, 0, -8):
+        new_text += text[i-1]
+    for i in range(62, 0, -8):
+        new_text += text[i-1]
+    for i in range(64, 0, -8):
+        new_text += text[i-1]
+    for i in range(57, 0, -8):
+        new_text += text[i-1]
+    for i in range(59, 0, -8):
+        new_text += text[i-1]
+    for i in range(61, 0, -8):
+        new_text += text[i-1]
+    for i in range(63, 0, -8):
+        new_text += text[i-1]
     return new_text
+
+
+def change_positions_for_an_end(text):
+    new_text = ""
+    L = 40
+    r = 8
+    while L <= 64 and r <= 32:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
+    L = 39
+    r = 7
+    while L <= 64 and r <= 31:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
+    L = 38
+    r = 6
+    while L <= 62 and r <= 30:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
+    L = 37
+    r = 5
+    while L <= 61 and r <= 29:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
+    L = 36
+    r = 4
+    while L <= 60 and r <= 28:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
+    L = 35
+    r = 3
+    while L <= 59 and r <= 27:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
+    L = 34
+    r = 2
+    while L <= 58 and r <= 26:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
+    L = 33
+    r = 1
+    while L <= 57 and r <= 25:
+        new_text += text[L - 1] + text[r - 1]
+        L += 8
+        r += 8
 
 
 def f_for_des(r, k):
@@ -30,10 +83,10 @@ def f_for_des(r, k):
 
 
 def rearrange_extantion(text):
+    print(text)
     new = ""
     mas = [32, 1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9, 8, 9, 10, 11, 12, 13, 12, 13, 14, 15, 16, 17, 16, 17, 18, 19, 20, 21,
-           20, 21,
-           22, 23, 24, 25, 24, 25, 26, 27, 28, 29, 28, 29, 30, 31, 32, 1]
+           20, 21, 22, 23, 24, 25, 24, 25, 26, 27, 28, 29, 28, 29, 30, 31, 32, 1]
     
     for i in mas:
         new += text[i - 1]
@@ -82,41 +135,63 @@ def choose_s(step):
                     [1, 15, 13, 8, 10, 3, 7, 4, 12, 5, 6, 11, 0, 14, 9, 2],
                     [7, 11, 4, 1, 9, 12, 14, 2, 0, 6, 10, 13, 15, 3, 5, 8],
                     [2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11]]
-        
+
 
 def s(text):
+    new_text = ""
+    print(text)
     for i in range(0, len(text) - 5, 6):
-        s_b = choose_s(i % 6 + 1)
-    
-    return text
+        string = text[i:i + 6]
+        s_b = choose_s(i // 6 + 1)
+        text_s = bin(s_b[int(string[0] + string[5], 2)][int(string[1:5], 2)])[2:]
+        text_s = "0" * (4 - len(text_s)) + text_s
+        new_text += text_s
+        # print(string, "=-=", text_s)
+    return new_text
+
+
+def p_block(text):
+    rearr = [16, 7, 20, 21, 29, 12, 28, 17, 1, 15, 23, 26, 5, 18, 31, 10,
+             2, 8, 24, 14, 32, 27, 3, 9, 19, 13, 30, 6, 22, 11, 4, 25]
+    new_text = ""
+    for i in rearr:
+        new_text += text[i - 1]
+    return new_text
 
 
 def code(text):
     ciphertext = ""
+    new_text = ""
     for x in text:
         ciphertext += str(hex(ord(x)))[2:]
-    print(len(ciphertext), ciphertext)
     ciphertext += "0" * (8 - len(ciphertext) % 8)
     
     ciphertext_bin = ""
     for x in ciphertext:
         ciphertext_bin += '{0:04b}'.format(int(x, 16))
     for piece in range(0, len(ciphertext_bin) // 64):
-        code_text = ciphertext[piece * 64:(piece + 1) * 64]
+        some_string = ciphertext_bin[piece * 64:(piece + 1) * 64]
+        print("==--==", some_string, len(some_string), "==--==")
+        code_text = ciphertext_bin[piece * 64:(piece + 1) * 64]
         code_text = change_positions_for_a_start(code_text)
+        print("start: ", code_text, len(code_text))
         l_t = code_text[:32]
         r_t = code_text[32:]
         for i in range(1, 17):
-            l1_t = r_t
-            r1_t = str(int(rearrange_extantion(r_t)) ^ int(shift_key(i)))
-            r1_t = s(r1_t)
-    
-    return ciphertext
+            print("1:", r_t)
+            r1_t = str(int(rearrange_extantion(r_t)) ^ int(shift_key(i))) #TODO перестает быть bin
+            print("2:", r1_t)
+            r1_t = p_block(s(r1_t))
+            r1_t = str(int(r1_t) ^ int(l_t))
+            l_t = r_t
+            r_t = r1_t
+        new_text += change_positions_for_an_end(l_t + r_t)
+    return new_text
 
 
 def decode(ciphertext):
     text = ""
     return text
 
-# code("Your lips are smother than vaseline. ")
-# s("123456789123qwerty123456uioert789564")
+
+print(code("8787878787878787"))

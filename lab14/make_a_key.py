@@ -82,3 +82,4 @@ def key_changing(stage):
     return new_key
 
 # num = key_changing(1)
+# reset_your_key()
