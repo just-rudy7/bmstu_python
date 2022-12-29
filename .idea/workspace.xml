@@ -7,11 +7,7 @@
     <list default="true" id="958f767a-9b38-44d7-b92f-ae0e5d3e5c74" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/Lucifer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/Lucifer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab14/lab 14.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/lab 14.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab15/lab 15 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab15/lab 15 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab15/lab 15 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab15/lab 15 3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,9 +154,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.Lucifer" />
         <item itemvalue="Python.lab 15 2" />
         <item itemvalue="Python.lab 15 1" />
-        <item itemvalue="Python.Lucifer" />
         <item itemvalue="Python.lab 14" />
       </list>
     </recent_temporary>
