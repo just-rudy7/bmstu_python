@@ -7,21 +7,21 @@ def change_positions_for_a_start(text):
     new_text = ""
     cnt = 0
     for i in range(58, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     for i in range(60, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     for i in range(62, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     for i in range(64, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     for i in range(57, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     for i in range(59, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     for i in range(61, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     for i in range(63, 0, -8):
-        new_text += text[i-1]
+        new_text += text[i - 1]
     return new_text
 
 
@@ -75,6 +75,7 @@ def change_positions_for_an_end(text):
         new_text += text[L - 1] + text[r - 1]
         L += 8
         r += 8
+    return new_text
 
 
 def f_for_des(r, k):
@@ -159,32 +160,43 @@ def p_block(text):
     return new_text
 
 
+def xor(a, b):
+    new = ""
+    for i in range(len(a)):
+        if a[i] != b[i]:
+            new += "1"
+        else:
+            new += "0"
+    return new
+
+
 def code(text):
-    ciphertext = ""
+    # ciphertext = ""
     new_text = ""
-    for x in text:
-        ciphertext += str(hex(ord(x)))[2:]
-    ciphertext += "0" * (8 - len(ciphertext) % 8)
+    # for x in text:
+    #     ciphertext += str(hex(ord(x)))[2:]
+    # ciphertext += "0" * (8 - len(ciphertext) % TODO bring bqck
+    ciphertext = "0123456789ABCDEF"
     ciphertext_bin = ""
     for x in ciphertext:
         ciphertext_bin += '{0:04b}'.format(int(x, 16))
     for piece in range(0, len(ciphertext_bin) // 64):
-        some_string = ciphertext_bin[piece * 64:(piece + 1) * 64]
-        print("==--==", some_string, len(some_string), "==--==")
+        # some_string = ciphertext_bin[piece * 64:(piece + 1) * 64]
         code_text = ciphertext_bin[piece * 64:(piece + 1) * 64]
+        print("==--==", code_text, len(code_text), "==--==") # TODO wrong l r
         code_text = change_positions_for_a_start(code_text)
         print("start: ", code_text, len(code_text))
         l_t = code_text[:32]
         r_t = code_text[32:]
         for i in range(1, 17):
             print("1:", r_t)
-            r1_t = str(int(rearrange_extantion(r_t)) ^ int(shift_key(i))) #TODO перестает быть bin
+            r1_t = xor(rearrange_extantion(r_t), shift_key(i))  # TODO перестает быть bin
             print("2:", r1_t)
             r1_t = p_block(s(r1_t))
-            r1_t = str(int(r1_t) ^ int(l_t))
+            r1_t = str(xor(r1_t, l_t))
             l_t = r_t
             r_t = r1_t
-        new_text += change_positions_for_an_end(l_t + r_t)
+        new_text += change_positions_for_an_end(r_t + l_t)
     return new_text
 
 

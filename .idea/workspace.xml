@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958f767a-9b38-44d7-b92f-ae0e5d3e5c74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab14/print_key.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/Lucifer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/Lucifer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab14/key.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/key.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab14/make_a_key.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/make_a_key.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab14/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab14/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +32,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "debugger.dataViews.python.type.renderers"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dasha\OneDrive\Документы\GitHub\bmstu_python\lab14" />
       <recent name="C:\Users\Dasha\OneDrive\Документы\GitHub\bmstu_python\lab13" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.make_a_key">
+  <component name="RunManager" selected="Python.Lucifer">
     <configuration name="Lucifer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bmstu_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,10 +153,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Lucifer" />
         <item itemvalue="Python.make_a_key" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.lab 14" />
-        <item itemvalue="Python.Lucifer" />
         <item itemvalue="Python.lab 15 2" />
       </list>
     </recent_temporary>
@@ -174,5 +171,16 @@
       <updated>1671186065062</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lab14/Lucifer.py</url>
+          <line>207</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
