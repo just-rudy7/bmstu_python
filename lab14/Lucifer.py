@@ -165,7 +165,6 @@ def code(text):
     for x in text:
         ciphertext += str(hex(ord(x)))[2:]
     ciphertext += "0" * (8 - len(ciphertext) % 8)
-    
     ciphertext_bin = ""
     for x in ciphertext:
         ciphertext_bin += '{0:04b}'.format(int(x, 16))
@@ -194,4 +193,4 @@ def decode(ciphertext):
     return text
 
 
-print(code("8787878787878787"))
+print(code("0123456789ABCDEF"))

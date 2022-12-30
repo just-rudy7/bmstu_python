@@ -1,4 +1,3 @@
-s = ""
-for i in range(32):
-    s += str(input())+", "
-print(s)
+s = "123456"
+shift = 1
+print(s[shift:] + s[:shift])
