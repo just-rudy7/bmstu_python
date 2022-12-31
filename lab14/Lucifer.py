@@ -1,6 +1,8 @@
 from struct import pack as pack
 from struct import unpack as unpack
 from make_a_key import key_changing as shift_key
+from make_a_key import choose_48 as chs48
+from make_a_key import reset_your_key as first_time_key
 
 
 def change_positions_for_a_start(text):
@@ -84,7 +86,7 @@ def f_for_des(r, k):
 
 
 def rearrange_extantion(text):
-    print(text)
+    # print(text)
     new = ""
     mas = [32, 1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9, 8, 9, 10, 11, 12, 13, 12, 13, 14, 15, 16, 17, 16, 17, 18, 19, 20, 21,
            20, 21, 22, 23, 24, 25, 24, 25, 26, 27, 28, 29, 28, 29, 30, 31, 32, 1]
@@ -171,8 +173,9 @@ def xor(a, b):
 
 
 def code(text):
-    # ciphertext = ""
     new_text = ""
+    key = first_time_key()
+    # ciphertext = ""
     # for x in text:
     #     ciphertext += str(hex(ord(x)))[2:]
     # ciphertext += "0" * (8 - len(ciphertext) % TODO bring bqck
@@ -183,14 +186,17 @@ def code(text):
     for piece in range(0, len(ciphertext_bin) // 64):
         # some_string = ciphertext_bin[piece * 64:(piece + 1) * 64]
         code_text = ciphertext_bin[piece * 64:(piece + 1) * 64]
-        print("==--==", code_text, len(code_text), "==--==") # TODO wrong l r
+        print("==--==", code_text, len(code_text), "==--==")
         code_text = change_positions_for_a_start(code_text)
         print("start: ", code_text, len(code_text))
         l_t = code_text[:32]
         r_t = code_text[32:]
         for i in range(1, 17):
+            key = shift_key(i, key)
             print("1:", r_t)
-            r1_t = xor(rearrange_extantion(r_t), shift_key(i))  # TODO перестает быть bin
+            print(key)
+            print(rearrange_extantion(r_t))
+            r1_t = xor(rearrange_extantion(r_t), chs48(key))
             print("2:", r1_t)
             r1_t = p_block(s(r1_t))
             r1_t = str(xor(r1_t, l_t))
@@ -205,4 +211,4 @@ def decode(ciphertext):
     return text
 
 
-print(code("0123456789ABCDEF"))
+print(code("8787878787878787"))

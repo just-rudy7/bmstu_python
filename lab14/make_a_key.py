@@ -57,16 +57,17 @@ def reset_your_key():
         bin_key += '{0:04b}'.format(int(x, 16))
     # print(bin_key)
     bin_key = reorganize_first_time(bin_key)
-    f.write(pack("56s", bin_key.encode("utf-8")))
-    f.close()
+    # f.write(pack("56s", bin_key.encode("utf-8")))
+    # f.close()
+    return bin_key
 
 
 # сдвиг ключа, запись его в файл, потом перестановка со сжатием до 48 бит, передача результата в Luci
-def key_changing(stage):
-    f = open("key.bin", "rb+")
-    f.seek(0)
-    bin_key = (unpack("56s", f.read(56))[0]).decode('utf-8', errors='ignore')
-    f.close()
+def key_changing(stage, bin_key):
+    # f = open("key.bin", "rb+")
+    # f.seek(0)
+    # bin_key = (unpack("56s", f.read(56))[0]).decode('utf-8', errors='ignore')
+    # f.close()
     if stage <= 2 or stage == 9 or stage == 16:
         shift = 1
     else:
@@ -79,11 +80,11 @@ def key_changing(stage):
     new_key = l_key[shift:] + l_key[:shift] + r_key[shift:] + r_key[:shift]
     # print("left:", l_key[shift:] + l_key[:shift])
     # print("left:", r_key[shift:] + r_key[:shift])
-    # print(new_key, len(new_key))
-    f = open("key.bin", "wb")
-    f.write(pack("56s", new_key.encode('utf-8')))
-    f.close()
-    new_key = choose_48(new_key)
+    # # print(new_key, len(new_key))
+    # f = open("key.bin", "wb")
+    # f.write(pack("56s", new_key.encode('utf-8')))
+    # f.close()
+    # new_key = choose_48(new_key)
     return new_key
 
 
