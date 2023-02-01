@@ -142,7 +142,6 @@ def choose_s(step):
 
 def s(text):
     new_text = ""
-    print(text)
     for i in range(0, len(text) - 5, 6):
         string = text[i:i + 6]
         s_b = choose_s(i // 6 + 1)
@@ -172,38 +171,46 @@ def xor(a, b):
     return new
 
 
+def in_text(text):
+    new_text = ""
+    while len(text) > 0:
+        #new_text += chr(int(text[0:9], 16))
+        text = text[9:]
+    return new_text
+
+
 def code(text):
     new_text = ""
     key = first_time_key()
-    # ciphertext = ""
-    # for x in text:
-    #     ciphertext += str(hex(ord(x)))[2:]
-    # ciphertext += "0" * (8 - len(ciphertext) % TODO bring bqck
-    ciphertext = "0123456789ABCDEF"
+    ciphertext = ""
+    for x in text:
+        ciphertext += str(hex(ord(x)))[2:]
+    print(ciphertext)
+    ciphertext += "0" * (8 - len(ciphertext))
+    print(ciphertext)
     ciphertext_bin = ""
     for x in ciphertext:
         ciphertext_bin += '{0:04b}'.format(int(x, 16))
     for piece in range(0, len(ciphertext_bin) // 64):
-        # some_string = ciphertext_bin[piece * 64:(piece + 1) * 64]
         code_text = ciphertext_bin[piece * 64:(piece + 1) * 64]
-        print("==--==", code_text, len(code_text), "==--==")
+        print("Piece of text to code: ", code_text)
         code_text = change_positions_for_a_start(code_text)
-        print("start: ", code_text, len(code_text))
+        print("After change position: ", code_text)
         l_t = code_text[:32]
         r_t = code_text[32:]
+        print(" left: ", l_t)
+        print("right: ", r_t)
         for i in range(1, 17):
+            print("-"*5, "step ", i, "-"*5)
             key = shift_key(i, key)
-            print("1:", r_t)
-            print(key)
-            print(rearrange_extantion(r_t))
             r1_t = xor(rearrange_extantion(r_t), chs48(key))
-            print("2:", r1_t)
             r1_t = p_block(s(r1_t))
             r1_t = str(xor(r1_t, l_t))
             l_t = r_t
             r_t = r1_t
         new_text += change_positions_for_an_end(r_t + l_t)
-    return new_text
+    print(new_text)
+    return in_text(new_text)
 
 
 def decode(ciphertext):
@@ -211,4 +218,4 @@ def decode(ciphertext):
     return text
 
 
-print(code("8787878787878787"))
+print(code("0123456789ABCDEF"), len("Your lip"))
