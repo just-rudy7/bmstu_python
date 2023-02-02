@@ -203,11 +203,17 @@ def code(text):
         for i in range(1, 17):
             print("-"*5, "step ", i, "-"*5)
             key = shift_key(i, key)
+            print("key = ", key)
             r1_t = xor(rearrange_extantion(r_t), chs48(key))
+            print("r_xor: ", r1_t)
             r1_t = p_block(s(r1_t))
+            print("r_pblock: ", r1_t)
+            print("left: ", l_t)
             r1_t = str(xor(r1_t, l_t))
+            print("after_xor: ", r1_t)
             l_t = r_t
             r_t = r1_t
+            print(l_t, r_t, sep = "\n")
         new_text += change_positions_for_an_end(r_t + l_t)
     print(new_text)
     return in_text(new_text)
@@ -217,5 +223,5 @@ def decode(ciphertext):
     text = ""
     return text
 
-
+#замазать что-то на кадре из фильма и предлодить угадать
 print(code("0123456789ABCDEF"), len("Your lip"))

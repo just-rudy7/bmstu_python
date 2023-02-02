@@ -1,1 +1,1 @@
-print(chr(32))
+print(hex(ord(str("Y"))))
